@@ -1,0 +1,379 @@
+{
+  "status": "source_snapshot_not_an_approved_ruleset",
+  "heroes": [
+    {
+      "name": "Rhukosk",
+      "race": "Lizard Person",
+      "attack": 1,
+      "specialDamage": 1,
+      "health": 5,
+      "armor": 1,
+      "magic": 2,
+      "spellName": "Toxic Trap",
+      "spellDescription": "Poisons a monster dealing 1 damage every round. Further casts add an additional 1 damage per round",
+      "source": {
+        "sheet": "Heroes",
+        "row": 2
+      }
+    },
+    {
+      "name": "Alruzzi",
+      "race": "Lizard Person",
+      "attack": 1,
+      "specialDamage": 1,
+      "health": 5,
+      "armor": 1,
+      "magic": 2,
+      "spellName": "Venom Bloom",
+      "spellDescription": "Coats a target in layered venom, adding 1 stack of poison per round for 3 rounds.",
+      "source": {
+        "sheet": "Heroes",
+        "row": 3
+      }
+    },
+    {
+      "name": "Klubain",
+      "race": "Gnome",
+      "attack": 1,
+      "specialDamage": 0,
+      "health": 4,
+      "armor": 1,
+      "magic": 3,
+      "spellName": "Thief's Cunning",
+      "spellDescription": "Pickpocket your foe to gain a resource of your choosing",
+      "source": {
+        "sheet": "Heroes",
+        "row": 4
+      }
+    },
+    {
+      "name": "Ussawei",
+      "race": "Gnome",
+      "attack": 1,
+      "specialDamage": 0,
+      "health": 4,
+      "armor": 1,
+      "magic": 3,
+      "spellName": "Nimble Escape",
+      "spellDescription": "Vanish into the shadows and avoid the next monster attack entirely.",
+      "source": {
+        "sheet": "Heroes",
+        "row": 5
+      }
+    },
+    {
+      "name": "Verthok",
+      "race": "Orc",
+      "attack": 2,
+      "specialDamage": 2,
+      "health": 5,
+      "armor": 1,
+      "magic": 1,
+      "spellName": "Primal Rampage",
+      "spellDescription": "Unleashes inner rage: for the rest of one combat, deal 1 extra damage per basic attack",
+      "source": {
+        "sheet": "Heroes",
+        "row": 6
+      }
+    },
+    {
+      "name": "Marzul",
+      "race": "Orc",
+      "attack": 2,
+      "specialDamage": 2,
+      "health": 5,
+      "armor": 1,
+      "magic": 1,
+      "spellName": "Roar of War",
+      "spellDescription": "Intimidates all monsters, reducing their next attack by 1 damage.",
+      "source": {
+        "sheet": "Heroes",
+        "row": 7
+      }
+    },
+    {
+      "name": "Bael",
+      "race": "Dwarf",
+      "attack": 1,
+      "specialDamage": 1,
+      "health": 5,
+      "armor": 2,
+      "magic": 2,
+      "spellName": "Might of the Mountain",
+      "spellDescription": "The strength of stone runs through your veins boosting resolve and endurance: Gain 1 armor",
+      "source": {
+        "sheet": "Heroes",
+        "row": 8
+      }
+    },
+    {
+      "name": "Thevra",
+      "race": "Dwarf",
+      "attack": 1,
+      "specialDamage": 1,
+      "health": 5,
+      "armor": 2,
+      "magic": 2,
+      "spellName": "Iron Will",
+      "spellDescription": "Gain 1 magic and 1 armor this turn; cannot be stunned or displaced.",
+      "source": {
+        "sheet": "Heroes",
+        "row": 9
+      }
+    },
+    {
+      "name": "Sokur",
+      "race": "Dark Elf",
+      "attack": 1,
+      "specialDamage": 3,
+      "health": 5,
+      "armor": 0,
+      "magic": 3,
+      "spellName": "Descend Darkness",
+      "spellDescription": "Envelops target in dark energy. Negates additional effect of next monster special attack (once per combat)",
+      "source": {
+        "sheet": "Heroes",
+        "row": 10
+      }
+    },
+    {
+      "name": "Khivris",
+      "race": "Dark Elf",
+      "attack": 1,
+      "specialDamage": 3,
+      "health": 5,
+      "armor": 0,
+      "magic": 3,
+      "spellName": "Veil of Night",
+      "spellDescription": "Gain invisibility for 1 round and deal +1 damage next turn.",
+      "source": {
+        "sheet": "Heroes",
+        "row": 11
+      }
+    },
+    {
+      "name": "Zeke",
+      "race": "Human",
+      "attack": 1,
+      "specialDamage": 2,
+      "health": 5,
+      "armor": 1,
+      "magic": 2,
+      "spellName": "Volcanic Eruption",
+      "spellDescription": "Summons a pillar of flame underneath an enemy scorching their body",
+      "source": {
+        "sheet": "Heroes",
+        "row": 12
+      }
+    },
+    {
+      "name": "Evalynn",
+      "race": "Human",
+      "attack": 1,
+      "specialDamage": 2,
+      "health": 5,
+      "armor": 1,
+      "magic": 2,
+      "spellName": "Heartfire Blade",
+      "spellDescription": "Engulfs your weapon in fire for 2 turns, adding +1 damage per hit.",
+      "source": {
+        "sheet": "Heroes",
+        "row": 13
+      }
+    }
+  ],
+  "monsters": [
+    {
+      "name": "Ashuraz the Demon Djin",
+      "stars": 1,
+      "health": 10,
+      "basicDamage": 1,
+      "specialDamage": 3,
+      "specialDescription": "Wish Twist \u2013 Unleashes a cursed bargain that twists fate and burns all involved.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 2
+      }
+    },
+    {
+      "name": "Varneth, the Coil Tyrant",
+      "stars": 1,
+      "health": 11,
+      "basicDamage": 2,
+      "specialDamage": 2,
+      "specialDescription": "Constricting Coil \u2013 Coils around its foe, squeezing the life out of them while crushing their spirit.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 3
+      }
+    },
+    {
+      "name": "Wooly Dire Wolf",
+      "stars": 1,
+      "health": 10,
+      "basicDamage": 3,
+      "specialDamage": 1,
+      "specialDescription": "Howl of Terror \u2013 Unleashes a chilling cry that rattles bones and dulls enemy attacks.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 4
+      }
+    },
+    {
+      "name": "Grallok the Broken (Tortured Owlbear)",
+      "stars": 1,
+      "health": 11,
+      "basicDamage": 1,
+      "specialDamage": 3,
+      "specialDescription": "Berserker Slam \u2013 Slams twice in a blind rage, fueled by pain and fury.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 5
+      }
+    },
+    {
+      "name": "Zahir the Bound (Warrior Genie)",
+      "stars": 1,
+      "health": 10,
+      "basicDamage": 2,
+      "specialDamage": 2,
+      "specialDescription": "Chainbreaker \u2013 Channels its will through ancient bindings to paralyze its enemy.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 6
+      }
+    },
+    {
+      "name": "Voltusk",
+      "stars": 1,
+      "health": 10,
+      "basicDamage": 2,
+      "specialDamage": 2,
+      "specialDescription": "Lightning Pounce \u2013 Leaps in a streak of static to strike an unpredictable target.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 7
+      }
+    },
+    {
+      "name": "The Riddlefang (Guardian Sphinx)",
+      "stars": 2,
+      "health": 13,
+      "basicDamage": 2,
+      "specialDamage": 3,
+      "specialDescription": "Riddle Lock \u2013 Casts a puzzle of fate that traps those who hesitate.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 8
+      }
+    },
+    {
+      "name": "Gorath the Destroyer",
+      "stars": 2,
+      "health": 14,
+      "basicDamage": 3,
+      "specialDamage": 2,
+      "specialDescription": "Infernal Smash \u2013 Slams his axe into the earth, igniting the battlefield around him.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 9
+      }
+    },
+    {
+      "name": "Mortag the Maligned",
+      "stars": 2,
+      "health": 14,
+      "basicDamage": 2,
+      "specialDamage": 3,
+      "specialDescription": "Plague Gale \u2013 Sends out a vile wind that infects flesh and clouds the mind.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 10
+      }
+    },
+    {
+      "name": "Velkash the Venom Queen (Tortured Scorpion Queen)",
+      "stars": 2,
+      "health": 13,
+      "basicDamage": 3,
+      "specialDamage": 2,
+      "specialDescription": "Acid Rain \u2013 Calls down a poisonous deluge that melts through defense.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 11
+      }
+    },
+    {
+      "name": "Slorrg of the Mire (Infested Bog Troll)",
+      "stars": 2,
+      "health": 15,
+      "basicDamage": 3,
+      "specialDamage": 1,
+      "specialDescription": "Swarm Release \u2013 Bursts with insects that swarm enemies and feed on weakness.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 12
+      }
+    },
+    {
+      "name": "Volmir the Skyflame (Enraged Wyvern)",
+      "stars": 3,
+      "health": 17,
+      "basicDamage": 1,
+      "specialDamage": 5,
+      "specialDescription": "Flame Dive \u2013 Launches from the skies in a blaze, crushing and burning its target.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 13
+      }
+    },
+    {
+      "name": "Aesmelia the Siren Queen (Ancient Siren)",
+      "stars": 3,
+      "health": 16,
+      "basicDamage": 2,
+      "specialDamage": 4,
+      "specialDescription": "Melody of Madness \u2013 Sings a forbidden tune that drowns logic and bends will.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 14
+      }
+    },
+    {
+      "name": "Rhaskhul the Scarred (Terrasque)",
+      "stars": 3,
+      "health": 18,
+      "basicDamage": 4,
+      "specialDamage": 2,
+      "specialDescription": "Seismic Roar \u2013 Lets out a roar so forceful it knocks enemies senseless.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 15
+      }
+    },
+    {
+      "name": "Ignarok, Flame of the Deep (Fire Giant)",
+      "stars": 4,
+      "health": 19,
+      "basicDamage": 4,
+      "specialDamage": 3,
+      "specialDescription": "Magma Wave \u2013 Erupts a surge of molten fury that scorches all in its path.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 16
+      }
+    },
+    {
+      "name": "Vaelstorm the Skyfather (Storm Dragon)",
+      "stars": 4,
+      "health": 20,
+      "basicDamage": 3,
+      "specialDamage": 3,
+      "specialDescription": "Lightning Storm Surge \u2013 Unleashes a storm burst that strikes and stuns with divine precision.",
+      "source": {
+        "sheet": "Monsters",
+        "row": 17
+      }
+    }
+  ]
+}

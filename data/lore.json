@@ -1,0 +1,83 @@
+{
+  "_comment": "Site-only lore/bio text for the marketing pages, not part of the game's catalog.json source of truth. Source: Stefan's Rise of Monsters spreadsheet (Heroes/Monsters tabs, Oct 24 2025), relayed by Hill 2026-11-03.",
+  "heroes": {
+    "Rhukosk": {
+      "clan": "Ashfang Wastes",
+      "bio": "A stoic swamp tracker, Rhukosk is patient and precise, striking from afar while toxins do the rest.",
+      "art": "Rhukosk draws his barbed longbow with calm precision, wading through tall swampgrass as he takes aim at a distant beast."
+    },
+    "Alruzzi": {
+      "clan": "Ashfang Wastes",
+      "bio": "A cunning hunter of the wetlands, Alruzzi blends stealth and venom to wear down even the mightiest foes.",
+      "art": "Alruzzi charges low through the reeds, twin blades flashing with venom as her tail cuts a wake in the golden grass."
+    },
+    "Klubain": {
+      "clan": "Duskwyrm Steppes",
+      "bio": "Mischievous and ingenious, Klubain is a scrappy rogue who turns every encounter into an opportunity.",
+      "art": "Klubain ducks beneath a monster's swing, flashing a grin as he slides in and jabs with his hidden dagger before vanishing into shadow."
+    },
+    "Ussawei": {
+      "clan": "Duskwyrm Steppes",
+      "bio": "Quick-witted and sly, Ussawei lets her blade do the talking while her nimble fingers steal the show.",
+      "art": "Ussawei cartwheels around her foe, striking with sharp precision before fading into the brush with a smirk and a wink."
+    },
+    "Verthok": {
+      "clan": "Shattered Steppes",
+      "bio": "A battlefield juggernaut, Verthok's fury is legendary; his axe carves paths few enemies survive.",
+      "art": "Verthok roars mid-leap, great axe raised high as he slams into his enemy with the earthshaking force of a berserker."
+    },
+    "Marzul": {
+      "clan": "Shattered Steppes",
+      "bio": "A warborn chieftain, Marzul commands brute strength and bloodlust in equal measure.",
+      "art": "Marzul storms forward, her blade already swinging in an arc meant to cleave through shields, banners, and bone alike."
+    },
+    "Bael": {
+      "clan": "Worldspine Mountains",
+      "bio": "A mountain guardian through and through, Bael's shield is as unyielding as the granite he calls home.",
+      "art": "Bael stands like a mountain, deflecting a blow with his hammer before countering with a shield slam that sends shockwaves through the ground."
+    },
+    "Thevra": {
+      "clan": "Worldspine Mountains",
+      "bio": "Thevra stands unbroken against the storm: unyielding, proud, and fiercely protective of her kin.",
+      "art": "Thevra braces with a calm exhale, hammer glowing faintly as she channels the strength of the stone beneath her feet to guard her allies."
+    },
+    "Sokur": {
+      "clan": "Hollowdeep",
+      "bio": "A shadow-wielding mystic, Sokur bends dark forces to shield his allies and devastate his foes.",
+      "art": "Sokur twists his staff in a dark arc, pulling tendrils of shadow through the air before hurling them forward in a withering blast."
+    },
+    "Khivris": {
+      "clan": "Hollowdeep",
+      "bio": "Silent and sharp as moonlight on glass, Khivris channels the shadows with haunting precision.",
+      "art": "Khivris glides across the battlefield with unnatural grace, her staff lashing in a crescent arc as magic pulses beneath her fingertips."
+    },
+    "Zeke": {
+      "clan": "Verdant Basin",
+      "bio": "A steadfast swordsman and natural leader, Zeke strikes with precision and elemental fury.",
+      "art": "Zeke deflects a monster's claw with his sword, spins, and strikes with a fiery riposte, cape whipping behind him like a banner of war."
+    },
+    "Evalynn": {
+      "clan": "Verdant Basin",
+      "bio": "Evalynn wields both blade and flame with grace; her calm demeanor conceals the fire within.",
+      "art": "Evalynn blazes through the battlefield, her flaming sword sweeping in arcs of heat and fury as enemies fall around her."
+    }
+  },
+  "monsters": {
+    "Ashuraz the Demon Djin": "A twisted fire spirit who grants wishes that always come at a horrifying cost. Ashuraz speaks in riddles and thrives on manipulation, reshaping fate through flame and deceit. Summoned only by the reckless, or the doomed.",
+    "Varneth, the Coil Tyrant": "A massive scaled beast that slithers through ancient ruins with silent grace. Its hypnotic gaze paralyzes prey before coiling tightly around them. Whispers say it once guarded a long-lost empire beneath the sands.",
+    "Wooly Dire Wolf": "A savage predator of the frozen wilds, its frost-tipped fur camouflages it in snowy terrain. Red eyes glow in the dark, and its howl is enough to freeze the blood of any wanderer.",
+    "Grallok the Broken (Tortured Owlbear)": "A monstrous fusion of bear and owl, warped by cruel experimentation. Its pained screech echoes through the woods. Scarred and stitched, it charges with fury, craving vengeance for the abomination it has become.",
+    "Zahir the Bound (Warrior Genie)": "A noble elemental warrior bound in golden chains, called forth from the Elemental Plane of Air. With every strike, it edges closer to freedom, fighting with both elegance and desperation.",
+    "Voltusk": "Born from a thunderbolt that struck a sacred mountain, Voltusk is speed and chaos embodied. Its crackling fur glows with static charge, and its bite can knock foes unconscious. Hunters say it disappears in a flash and returns with thunder.",
+    "The Riddlefang (Guardian Sphinx)": "An ancient protector of forbidden knowledge, carved by the gods and animated by riddles. Its wings blot the sun, and its judgment is final: fail its question, and feel the sting of divine claws.",
+    "Gorath the Destroyer": "A fallen titan clad in obsidian armor, wielding a colossal flaming axe. Every step it takes cracks the earth beneath it. His wrath is as heavy as the mountains he once ruled.",
+    "Mortag the Maligned": "Banished by a conclave of mages, Mortag returned from the grave as a lich. His cursed winds shred the will of his enemies, while skeletal spirits whisper their madness through the fog.",
+    "Velkash the Venom Queen (Tortured Scorpion Queen)": "A once-proud ruler twisted by venom and spite. Her cracked carapace drips with acid, and her venomous crown pierces any who draw near. She commands a brood of pain and poison.",
+    "Slorrg of the Mire (Infested Bog Troll)": "A towering brute teeming with rot and parasites. His bloated form leaks swamp filth with every step. He spreads decay not just with his club, but with every breath and wound.",
+    "Volmir the Skyflame (Enraged Wyvern)": "A skyborne terror of claw and flame. Its twin wings serve as both limbs and weapons, and its mind burns with blind rage. When it dives, nothing survives the impact.",
+    "Aesmelia the Siren Queen (Ancient Siren)": "A timeless spirit whose beauty conceals a heart of cruelty. Her voice charms even monsters, drawing them into illusions and madness. Her waters are graveyards of those who dared to listen.",
+    "Rhaskhul the Scarred (Terrasque)": "A near-unstoppable juggernaut with armor like mountains and eyes filled with endless rage. Its body is marked with scars from ancient wars, and yet none have ever brought it down.",
+    "Ignarok, Flame of the Deep (Fire Giant)": "A blazing juggernaut born from the molten core of the world. It lives only for conquest and incineration, a walking inferno wielding fire as an extension of its will.",
+    "Vaelstorm the Skyfather (Storm Dragon)": "A divine beast born from lightning and hurricane winds. It soars above the clouds, calling storms to its aid. Entire fleets have vanished beneath its roar."
+  }
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#131e26">
+  <title>Clan Leaders — Rise of Monsters</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="wordmark">RISE <small>OF</small> MONSTERS</a>
+    <nav class="site-nav">
+      <a href="/">Home</a>
+      <a href="/world.html">The World</a>
+      <a href="/clans.html" aria-current="page">Clan Leaders</a>
+      <a href="/monsters.html">Monsters</a>
+      <span class="cta quiet" aria-disabled="true" title="Playable demo not yet released">Play — Coming Soon</span>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="text-align:left;padding-top:20px">
+      <p class="eyebrow">Clan Leaders</p>
+      <h1>12 leaders. 6 bloodlines. One hex to hold.</h1>
+      <p class="lede" style="margin-left:0">
+        Every clan fields a single leader — the only unit with stats, and the one who stands
+        in every fight. Each bloodline trades differently between attack, armor, and magic.
+      </p>
+    </section>
+
+    <div class="gallery-filters" id="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="Lizard Person">Lizard Person</button>
+      <button data-filter="Gnome">Gnome</button>
+      <button data-filter="Orc">Orc</button>
+      <button data-filter="Dwarf">Dwarf</button>
+      <button data-filter="Dark Elf">Dark Elf</button>
+      <button data-filter="Human">Human</button>
+    </div>
+
+    <div class="card-grid" id="grid">
+      <p class="loading">Loading the roster…</p>
+    </div>
+  </main>
+
+  <dialog id="detail">
+    <div class="detail-body">
+      <button class="close" id="close-detail">Close</button>
+      <div class="detail-img"></div>
+      <p class="eyebrow detail-subtitle"></p>
+      <h2 class="detail-title"></h2>
+      <p class="stats detail-stats" style="font-size:13px;color:#b5bcae;margin-bottom:12px"></p>
+      <p class="detail-body-text" style="color:#d9d2bd"></p>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <span>Rise of Monsters — private build, not yet public</span>
+    <span>Stats and spells pulled live from the game's own card catalog</span>
+  </footer>
+
+  <script type="module" src="/clans-page.js"></script>
+</body>
+</html>
