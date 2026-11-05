@@ -15,6 +15,9 @@ export async function loadCatalog() {
   return { catalog, artByGroup, lore };
 }
 
+// Only health, armor and magic are real stats in the game; attack/special
+// numbers are not explicit player-facing stats and are deliberately not
+// shown here, in the grid or in the drawer.
 export function renderHeroes(heroes, art, lore = {}) {
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
@@ -26,23 +29,13 @@ export function renderHeroes(heroes, art, lore = {}) {
     card.dataset.race = hero.race;
     card.innerHTML = `
       ${img ? `<img src="${img}" alt="${hero.name} card art" loading="lazy">` : ""}
-      <div class="meta">
-        <p class="tag">${hero.race}</p>
-        <h3>${hero.name}</h3>
-        <div class="stats">
-          <span>❤ ${hero.health}</span>
-          <span>⚔ ${hero.attack}</span>
-          <span>✨ ${hero.specialDamage}</span>
-          <span>🛡 ${hero.armor}</span>
-          <span>🔮 ${hero.magic}</span>
-        </div>
-      </div>`;
-    card.addEventListener("click", () => openDetail({
+      <div class="meta"><h3>${hero.name}</h3></div>`;
+    card.addEventListener("click", () => toggleDrawer(card, {
       title: hero.name,
       subtitle: `${hero.race} · ${hero.spellName}`,
       body: bio ? `${bio}\n\n${hero.spellDescription}` : hero.spellDescription,
-      stats: `Health ${hero.health} · Attack ${hero.attack} · Special ${hero.specialDamage} · Armor ${hero.armor} · Magic ${hero.magic}`,
       img,
+      wide: true,
     }));
     grid.appendChild(card);
   }
@@ -61,37 +54,55 @@ export function renderMonsters(monsters, art, lore = {}) {
     card.className = "entity-card";
     card.dataset.tier = m.stars;
     card.innerHTML = `
-      ${img ? `<img src="${img}" alt="${m.name} art" loading="lazy">` : `<div class="loading" style="aspect-ratio:3/4;display:grid;place-items:center">Art pending</div>`}
+      ${img ? `<img src="${img}" alt="${m.name} art" loading="lazy">` : `<div class="loading" style="aspect-ratio:2/3;display:grid;place-items:center">Art pending</div>`}
       <div class="meta">
         <p class="tag">${TIER_LABEL[m.stars] || `Tier ${m.stars}`}</p>
         <h3>${m.name}</h3>
-        <div class="stats">
-          <span>❤ ${m.health}</span>
-          <span>⚔ ${m.basicDamage}</span>
-          <span>✨ ${m.specialDamage}</span>
-        </div>
       </div>`;
-    card.addEventListener("click", () => openDetail({
+    card.addEventListener("click", () => toggleDrawer(card, {
       title: m.name,
       subtitle: TIER_LABEL[m.stars] || `Tier ${m.stars}`,
       body: bio ? `${bio}\n\n${m.specialDescription}` : m.specialDescription,
-      stats: `Health ${m.health} · Basic attack ${m.basicDamage} · Special ${m.specialDamage}`,
       img,
+      wide: false,
     }));
     grid.appendChild(card);
   }
 }
 
-function openDetail({ title, subtitle, body, stats, img }) {
-  const dialog = document.getElementById("detail");
-  dialog.querySelector(".detail-img").outerHTML = img
-    ? `<img class="detail-img" src="${img}" alt="${title}">`
-    : `<div class="detail-img"></div>`;
-  dialog.querySelector(".detail-title").textContent = title;
-  dialog.querySelector(".detail-subtitle").textContent = subtitle;
-  dialog.querySelector(".detail-stats").textContent = stats;
-  dialog.querySelector(".detail-body-text").textContent = body;
-  dialog.showModal();
+// A drop-down drawer inline in the grid, instead of a modal popup: click a
+// card to open its full detail directly below it (spanning the full grid
+// width); click the open card again, or Close, to collapse it.
+let openCard = null;
+function toggleDrawer(card, { title, subtitle, body, img, wide }) {
+  const existing = document.querySelector(".card-drawer");
+  const reopening = openCard === card;
+  existing?.remove();
+  card.classList.remove("open");
+  openCard = null;
+  if (reopening) return;
+  card.classList.add("open");
+  openCard = card;
+  const drawer = document.createElement("section");
+  drawer.className = "card-drawer";
+  drawer.innerHTML = `
+    <button class="card-drawer-close" aria-label="Close">✕</button>
+    <div class="card-drawer-body">
+      ${img ? `<img src="${img}" alt="${title}" class="${wide ? "wide" : ""}">` : ""}
+      <div class="card-drawer-text">
+        <p class="eyebrow">${subtitle}</p>
+        <h3>${title}</h3>
+        <p class="card-drawer-copy">${body ?? ""}</p>
+      </div>
+    </div>`;
+  drawer.querySelector(".card-drawer-close").addEventListener("click", (e) => {
+    e.stopPropagation();
+    drawer.remove();
+    card.classList.remove("open");
+    openCard = null;
+  });
+  card.insertAdjacentElement("afterend", drawer);
+  drawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
 }
 
 export function wireFilters(selector = "[data-filter]") {
@@ -104,9 +115,7 @@ export function wireFilters(selector = "[data-filter]") {
       const key = card.dataset.race ?? card.dataset.tier;
       card.style.display = value === "all" || key === value ? "" : "none";
     });
+    document.querySelector(".card-drawer")?.remove();
+    openCard = null;
   }));
 }
-
-document.getElementById("close-detail")?.addEventListener("click", () => {
-  document.getElementById("detail").close();
-});
