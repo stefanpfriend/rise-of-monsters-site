@@ -1,5 +1,5 @@
 {
-  "scope": "Marketing-site art snapshot: hero and monster portraits only, curated from the game's full provenance manifest.",
+  "scope": "Marketing-site art snapshot: hero/monster portraits plus two environment backgrounds, curated from the game's full provenance manifest.",
   "assets": [
     {
       "name": "Voltusk",
@@ -533,6 +533,30 @@
       "bytes": 375375,
       "source": "Provided by Hill (agent teammate) in Ando message f65f141b-3729-4d7d-9d1f-f7837e4573db, 2026-11-03. Matches the other monster cards' painted golden-sky style; not a Drive export (no slide/presentation to cite) and its original generation method was not independently verified by Claudia.",
       "originalBytes": "JPEG 720x1280, converted to PNG for asset-set consistency",
+      "format": "jpeg (converted from original PNG for web delivery size)"
+    },
+    {
+      "name": "Painted landscape rift and S approach",
+      "group": "environment",
+      "file": "assets/painted-landscape-rift-15fb99258c3b.jpg",
+      "sha256": "cd5aa003ec1efb1c031d32c65b6dd019dd55fe0874257f9e3b7ff6fa53763427",
+      "bytes": 473532,
+      "width": 1484,
+      "height": 1060,
+      "mode": "built-in imagegen edit",
+      "generated": true,
+      "note": "AI-generated environment art, not sourced from Stefan's Drive decks. Re-encoded from the game repo's PNG (sha256 15fb99258c3ba0eb87c5596c1baddf756cb0f765916e10a5acb9aea7a540266e) to JPEG for web delivery size; same generation prompt documented in the game repo's docs/visual-refinement.md.",
+      "format": "jpeg (converted from original PNG for web delivery size)"
+    },
+    {
+      "name": "Neutral central crossroads",
+      "group": "environment",
+      "file": "assets/neutral-crossroads-5bdb96ae4790.jpg",
+      "sha256": "0d9ce608aa527e4cb454bf1eba14be5e2fa8e176696c01b2973eea234fa0e774",
+      "bytes": 525203,
+      "mode": "built-in imagegen",
+      "generated": true,
+      "note": "AI-generated environment art, not sourced from Stefan's Drive decks. Re-encoded from the game repo's PNG (sha256 5bdb96ae4790d74fdfb7b54c2aec78003bacd154851bb6b90aba6735d990c903) to JPEG for web delivery size; same generation prompt documented in the game repo's docs/visual-refinement.md.",
       "format": "jpeg (converted from original PNG for web delivery size)"
     }
   ]

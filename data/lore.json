@@ -79,5 +79,45 @@
     "Rhaskhul the Scarred (Terrasque)": "A near-unstoppable juggernaut with armor like mountains and eyes filled with endless rage. Its body is marked with scars from ancient wars, and yet none have ever brought it down.",
     "Ignarok, Flame of the Deep (Fire Giant)": "A blazing juggernaut born from the molten core of the world. It lives only for conquest and incineration, a walking inferno wielding fire as an extension of its will.",
     "Vaelstorm the Skyfather (Storm Dragon)": "A divine beast born from lightning and hurricane winds. It soars above the clouds, calling storms to its aid. Entire fleets have vanished beneath its roar."
+  },
+  "world": {
+    "_comment": "Verbatim/condensed from Rise-of-Monsters-Story.md, the Story doc Stefan shared via Hill 2026-11-03 (attachment eca670a3-a5d6-406c-9e6e-75a5b8d690e8). Not invented.",
+    "stages": [
+      {
+        "eyebrow": "Long ago",
+        "heading": "The clans were constantly at war.",
+        "text": "The world was in constant turmoil, clan against clan, until an ominous, powerful darkness descended upon the land."
+      },
+      {
+        "eyebrow": "The darkness",
+        "heading": "Monsters nearly destroyed the world.",
+        "text": "Emerging from the horizon came monsters that nearly destroyed the world and all its people."
+      },
+      {
+        "eyebrow": "The heroes",
+        "heading": "Great heroes banded together.",
+        "text": "By some miracle, great heroes emerged from the separate clans and united to face the onslaught of terror that threatened their very existence."
+      },
+      {
+        "eyebrow": "The sacrifice",
+        "heading": "The Shadow Amulet was shattered.",
+        "text": "The source of the darkness was the Shadow Amulet, a relic that could command and empower monsters. United by necessity, the clans shattered it into pieces to splinter its power and hide its dark influence."
+      },
+      {
+        "eyebrow": "The peace",
+        "heading": "An era of harmony.",
+        "text": "Through great effort and sacrifice, the mighty warriors forced the monsters to retreat. The world enjoyed an era of harmony, and in time the amulet's true nature was lost to memory."
+      },
+      {
+        "eyebrow": "Now",
+        "heading": "One piece has awakened.",
+        "text": "Eons have passed. Something dark and foreboding is stirring again. One shattered piece of the Shadow Amulet has awakened, and the monsters have begun to reemerge. As each round progresses, more pieces stir, bringing greater threats."
+      },
+      {
+        "eyebrow": "The call",
+        "heading": "Are there any heroes left?",
+        "text": "The clans must band together once more to survive and beat back the monsters, hoping to quell the evil and uncover why the amulet has awakened at all."
+      }
+    ]
   }
 }

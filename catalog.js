@@ -22,7 +22,7 @@ export function renderHeroes(heroes, art, lore = {}) {
     const img = art.heroCards?.[hero.name] || art.heroes?.[hero.name];
     const bio = lore.heroes?.[hero.name]?.bio;
     const card = document.createElement("article");
-    card.className = "entity-card";
+    card.className = "entity-card" + (art.heroCards?.[hero.name] ? " wide" : "");
     card.dataset.race = hero.race;
     card.innerHTML = `
       ${img ? `<img src="${img}" alt="${hero.name} card art" loading="lazy">` : ""}
