@@ -138,7 +138,7 @@ main {
 }
 .story-hook {
   margin: -48px -28px 0;
-  padding: 120px max(28px, calc((100vw - 1200px) / 2)) 90px;
+  padding: 120px 28px 90px;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -152,6 +152,9 @@ main {
   text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 .story-hook h1 {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
   text-shadow: 0 2px 14px rgba(0,0,0,0.7);
 }
 .scroll-cue {
@@ -174,7 +177,11 @@ main {
   margin: 0 -28px;
 }
 .story-stage {
-  padding: 90px max(28px, calc((100vw - 760px) / 2));
+  /* Fixed side padding; the h2/p inside already center themselves with
+     max-width + margin:auto. A 100vw-based calc here double-counted the
+     parent <main>'s own 1200px cap and collapsed this to a sliver on an
+     ordinary desktop viewport. */
+  padding: 90px 28px;
   text-align: center;
   border-bottom: 1px solid var(--line);
   background: var(--night-deep);
@@ -201,7 +208,7 @@ main {
 }
 .story-finale {
   margin: 0 -28px 56px;
-  padding: 100px max(28px, calc((100vw - 1200px) / 2));
+  padding: 100px 28px;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -325,12 +332,10 @@ section + section {
   display: block;
   background: #0c141a;
 }
-.entity-card.wide img {
-  /* Hero art is the full 1600x900 card render, not a cropped portrait.
-     Match its real aspect ratio so object-fit:cover shows the whole card
-     instead of cutting most of it off. */
-  aspect-ratio: 16 / 9;
-  object-position: top;
+.entity-card.hero-card img {
+  /* Hero portraits are 1536x1024 character art (3:2), separate from the
+     full printed card shown in the drawer. Match the real aspect ratio. */
+  aspect-ratio: 3 / 2;
 }
 .entity-card .meta {
   padding: 14px 16px 18px;

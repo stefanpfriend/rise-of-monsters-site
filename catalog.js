@@ -15,27 +15,28 @@ export async function loadCatalog() {
   return { catalog, artByGroup, lore };
 }
 
-// Only health, armor and magic are real stats in the game; attack/special
-// numbers are not explicit player-facing stats and are deliberately not
-// shown here, in the grid or in the drawer.
+// Grid tiles show only the character portrait and name; only health, armor
+// and magic are real stats, and neither they nor the printed full card are
+// shown until the drawer opens, so nothing is repeated between the two.
 export function renderHeroes(heroes, art, lore = {}) {
   const grid = document.getElementById("grid");
   grid.innerHTML = "";
   for (const hero of heroes) {
-    const img = art.heroCards?.[hero.name] || art.heroes?.[hero.name];
+    const portrait = art.heroes?.[hero.name];
+    const fullCard = art.heroCards?.[hero.name];
     const bio = lore.heroes?.[hero.name]?.bio;
     const card = document.createElement("article");
-    card.className = "entity-card" + (art.heroCards?.[hero.name] ? " wide" : "");
+    card.className = "entity-card hero-card";
     card.dataset.race = hero.race;
     card.innerHTML = `
-      ${img ? `<img src="${img}" alt="${hero.name} card art" loading="lazy">` : ""}
+      ${portrait ? `<img src="${portrait}" alt="${hero.name}" loading="lazy">` : ""}
       <div class="meta"><h3>${hero.name}</h3></div>`;
     card.addEventListener("click", () => toggleDrawer(card, {
       title: hero.name,
       subtitle: `${hero.race} · ${hero.spellName}`,
       body: bio ? `${bio}\n\n${hero.spellDescription}` : hero.spellDescription,
-      img,
-      wide: true,
+      img: fullCard || portrait,
+      wide: !!fullCard,
     }));
     grid.appendChild(card);
   }
@@ -72,7 +73,10 @@ export function renderMonsters(monsters, art, lore = {}) {
 
 // A drop-down drawer inline in the grid, instead of a modal popup: click a
 // card to open its full detail directly below it (spanning the full grid
-// width); click the open card again, or Close, to collapse it.
+// width); click the open card again, or Close, to collapse it. The drawer
+// shows a different image than the grid tile (full printed card for heroes,
+// a larger view of the same art for monsters, which have no separate card
+// scan) so nothing reads as a repeat of what's already visible.
 let openCard = null;
 function toggleDrawer(card, { title, subtitle, body, img, wide }) {
   const existing = document.querySelector(".card-drawer");
